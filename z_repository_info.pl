@@ -65,6 +65,7 @@ $c->{repository_info}->{content} = sub
 			foreach my $doc (@docs)
 			{
 				$open_fulltext = 1 if $doc->is_public;
+				last if $open_fulltext == 1;
 			}
 		}
 
