@@ -17,6 +17,16 @@ $c->{repository_info}->{repository} =
 		my ($repo) = @_;
 		return $repo->config('adminemail');
 	},
+		'languages' => sub
+	{
+		my ($repo) = @_;
+		return join(";", @{$repo->config('languages')});
+	},
+	'language_default' => sub
+	{
+		my ($repo) = @_;
+		return $repo->config('defaultlanguage');
+	},
 };
 
 $c->{repository_info}->{platform} =
